@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Palette Generator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>Color Palette Generator</h1>
+    </header>
+    <div class="bg-video-container">
+        <video class="bg-video" autoplay muted loop>
+          <source src="assests/Untitled video - Made with Clipchamp (2).mp4" type="video/mp4">
+          Your browser does not support HTML5 video.
+        </video>
+        <div class="overlay"></div>
+      </div>
+      
+    <section id="color-palette" class="palette-container"></section>
+
+    <section class="buttons">
+      <button id="generate-palette">Generate New Palette</button>
+      <button id="save-palette">Save Palette</button>
+      <button id="randomize-all">Randomize All Colors</button>
+      <select id="load-palette">
+        <option value="">Load Palette</option>
+      </select>
+    </section>
+    <div class="sparkle-container">
+      <a href="http://www.4dstudio.in" class="sparkle-link" id="sparkle-link">
+          Did you discover your dream color after playing with the palette?
+          <br> Want to know how to make the best use of these colours for your brand? click here!
+      </a>
+  </div>
+  <br>
+  <br>
+    <!--<section id="small-video-section">
+      <div class="small-video-container">
+        <video class="small-video" autoplay muted loop>
+          <source src="assests/blue.mp4" type="video/mp4">
+          Your browser does not support HTML5 video.
+        </video>
+      </div>
+    </section>-->
+  
+  <!--color extraction-->
+  <div class="color-extraction-container">
+    <h1 class="color-extraction-header">Color Extractor</h1>
+    <form id="image-upload-form" class="color-extraction-form" enctype="multipart/form-data">
+      <input type="file" id="image-input" class="color-extraction-input" accept="image/*" />
+      <label for="image-input">Choose an Image</label>
+      <button type="button" class="color-extraction-button" onclick="extractColors()">Upload and Extract Colors</button>
+    </form>
+    <div id="loading" class="color-extraction-loading" style="display: none;">Processing...</div>
+    <div id="uploaded-image-container" class="uploaded-image-container">
+      <img id="uploaded-image" class="uploaded-image" src="" alt="Uploaded Image" style="display: none;">
+    </div>
+    <div id="color-results" class="color-extraction-results"></div>
+  </div>
+
+  <!--text redirect-->
+  
+  <br>
+  <br>
+  <br>
+
+  <br>
+  <br>
+    <footer>
+      <p>&copy; 2024 Color Palette Generator</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.2/color-thief.umd.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
